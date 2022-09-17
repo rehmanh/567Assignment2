@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Updated Jan 21, 2018
+Updated Sept 17, 2022
 The primary goal of this file is to demonstrate a simple unittest implementation
 
 @author: jrr
 @author: rk
+@author : hrehman
 """
 
 import unittest
@@ -43,6 +44,18 @@ class TestTriangles(unittest.TestCase):
     
     def testIsoscelesTriangle(self):
         self.assertEqual(classifyTriangle(4, 4, 6), 'Isosceles', '4, 4, 6 is an Isosceles Triangle')
+
+    def testEquilateralWithDecimals(self):
+        self.assertEqual(classifyTriangle(6.5, 6.5, 6.5), 'Equilateral', '6.5, 6.5, 6.5 is an Equilateral Triangle')
+    
+    def testIsoscelesTriangleWithDecimals(self):
+        self.assertEqual(classifyTriangle(4.6, 4.6, 6.9), 'Isosceles', '4.6, 4.6, 6.9 is an Isosceles Triangle')
+    
+    def testRightTriangleWithDecimals(self):
+        self.assertEqual(classifyTriangle(6, 8, 10.00000001), 'Right', '6, 8, 10 is a Right Triangle')
+
+    def testScaleneTriangleWithDecimals(self):
+        self.assertEqual(classifyTriangle(12.5, 7.5, 15.5), 'Scalene', '7.5, 12.5, 15.5 is a Scalene Triangle')
         
 
 if __name__ == '__main__':
