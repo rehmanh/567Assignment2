@@ -62,7 +62,7 @@ def classifyTriangle(a,b,c):
         return 'Equilateral'
     elif (round((a ** 2), 0) + round((b ** 2), 0)) == round((c ** 2), 0):
         return 'Right'
-    elif (a != b) and  (b != c) and (a != b):
+    elif (a != b) and  (b != c) and (a != c):
         return 'Scalene'
     else:
         return 'Isosceles'

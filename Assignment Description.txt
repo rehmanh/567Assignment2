@@ -1,0 +1,47 @@
+1. Assignment Description
+
+The objective of this assignment is for you to (a) develop a set of tests for an existing triangle classification program, (b) use those tests to find and fix defects in that program, and (c) report on your testing results for the Triangle problem. 
+
+2. Author
+
+@hrehman Habib ur Rehman
+
+3. Summary
+
+When running the initial test cases in TestTriangle.py, I noticed that not only were none of the included test cases passing, but also the test class was incomplete, in that it did not encapsulate all of the application logic for Triangle.py within it. Although the application logic included error handling for when invalid inputs were being passed, the tests did not include cases for NotATriangle, Scalane triangles, isosceles trianges, or triangles with non-integer numeric side lengths. The legacy test class only included 3 total test cases. To summarize my findings and results, I added some new test cases, re-ran the test class, and then modified the existing application logic inside Triangle.py to ensure that the test cases would pass. This included syntax changes, correctness changes, as well as changes to logic flow.
+
+After editing the application logic, and also including more comprehensive tests, all of the test cases, including the legacy test cases, passed.
+
+4. Reflection
+
+I learned that using test cases to verify whether application/production logic is working is an effective technique in debugging and solving problems. It also gave us an example of how developers would likely encounter code and tests in the real world; where test cases and application logic are already written and developers may have to adapt the application logic to make sure tests pass, especially in cases where changes to the application logic take place.
+
+5. Honor Pledge
+
+I testify that the work done as part of this assignment is mine and mine alone. I did not plagiarize this work, nor did I provide any of my classmates with information that would result in unfair completion of the assignment for them.
+
+6. Detailed Results
+
+After running the initial test cases, I went ahead and added some additional test cases, 6 to be exact. These test cases would assert the following:
+- invalid inputs as arguments
+- not a triangle 
+- scalene triangle inputs
+- isosceles triangle inputs
+- equilateral triangle inputs
+
+I went ahead and re-ran the test class, only to find that of the new test cases added, only 2 of them were passing. Next, I went agead and changed the application logic to fix some of the bugs that were in the existing code. Here is a list of everything I changed:
+- removed illegal semicolon
+- re-arranged InvalidInput check to ensure application logic first checked for invalid input arguments before proceeding to determine type of triangle
+- fixed logic that determined NotATriangle
+- fixed logic that determined Equilateral triangle
+- fixed logic that determined Right triangle (added * and round method)
+- fixed typo in Isosceles
+- fixed logic that determined Scalene
+
+I also went ahead and added some helper logic that would order the triangle side arguments in increasing order.
+
+I re-ran the test cases after this, and all of the test cases passed.
+
+Finally, I wanted to ensure that non-integer numerical values would also work, so I modified the use of isinstance() to return InvalidInput only when String arguments were passed. I then added some test cases to assert decimal sides would work, and those test cases also passed.
+
+In total, I added 10 test cases to create a test class with 13 test cases, all of which were passing.
