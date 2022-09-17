@@ -1,5 +1,8 @@
 ### Assignment 2a
 
+[![build status of master](https://app.travis-ci.com/rehmanh/567Assignment2.svg?branch=master)](https://app.travis-ci.com/github/rehmanh/567Assignment2)
+
+
 @author: hrehman
 
 Assignment 2a : Testing a Legacy Program and reporting on testing results
